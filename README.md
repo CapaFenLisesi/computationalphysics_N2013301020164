@@ -11,7 +11,7 @@ Discussion about coding is most welcome.
 
 Contact me at *jameslee@whu.edu.cn*.
 
-##Exercise Program
+##Related Program
 To be uploaded...
 
 ##BlahBlah...
