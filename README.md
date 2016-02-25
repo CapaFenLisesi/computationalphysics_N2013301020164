@@ -1,6 +1,20 @@
-# My Official Computational Physics Page
+# My Official Computational Physics Repository
 #####Produced by James Lee :octocat:
 
+##About this repository
+This repository is built for the course **Computational Physics** given by **Prof.Cai**.
+Programs concerning this course will be uploaded to this repository.
+
+Citing of my code will be allowed if my contribution is acknowledged.
+
+Discussion about coding is most welcome. 
+
+Contact me at *jameslee@whu.edu.cn*.
+
+##Exercise Program
+To be uploaded...
+
+##BlahBlah...
 **Richard Feynman** once said:
 >It's great for a physicist to have a computer.
 
@@ -25,5 +39,3 @@ Here are the tasks I prepare to accomplish in this semester:
   1. have fun
   2. have fun
 2. HAVE FUN
-
-Thank you
