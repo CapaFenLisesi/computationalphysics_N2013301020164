@@ -2,7 +2,7 @@
 #####Produced by James Lee :octocat:
 
 ##About this repository
-This repository is built for the course **Computational Physics** given by **Prof.Cai**.
+This repository is built for the course **Computational Physics** lectured by **Prof.Cai**.
 Programs concerning this course will be uploaded to this repository.
 
 Citing of my code will be allowed if my contribution is acknowledged.
