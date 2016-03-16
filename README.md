@@ -20,6 +20,10 @@ Assignment reports will be written in LaTeX manner. TeX files and PDF files will
    -[TeX File](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/Report_1.tex)
    -[PDF File](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/Report_1.pdf)
 2. vim has been installed.
+ 
+   Report files:
+   -[TeX File](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/Report_2.tex)
+   -[PDF File](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/Report_2.pdf)
 3. I have written a program that reaches L2. -[Program](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/fonts.py)
 
 ##BlahBlah...
