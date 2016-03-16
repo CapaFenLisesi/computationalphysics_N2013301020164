@@ -15,6 +15,9 @@ Contact me at *jameslee@whu.edu.cn*.
 Assignment reports will be written in LaTex manner. Tex files and pdf files will be uploaded.
 
 1. Linux,Python have been installed. Github accounts has been signed up. -[Readme.md](https://github.com/jamesofey/computationalphysics_N2013301020164/edit/master/README.md) has been written. 
+   Report files: 
+   -[TeX File](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/Report_1.tex)
+   -[PDF File](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/Report_1.pdf)
 2. vim has been installed.
 3. I have written a program that reaches L2. -[Program](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/fonts.py)
 
