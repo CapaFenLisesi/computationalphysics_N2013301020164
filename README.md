@@ -11,8 +11,12 @@ Discussion about coding is most welcome.
 
 Contact me at *jameslee@whu.edu.cn*.
 
-##Related Programs
-To be uploaded...
+##Assignments
+Assignment reports will be written in LaTex manner. Tex files and pdf files will be uploaded.
+
+1. Linux,Python have been installed. Github accounts has been signed up. -[Readme.md](https://github.com/jamesofey/computationalphysics_N2013301020164/edit/master/README.md) has been written. 
+2. vim has been installed.
+3. I have written a program that reaches L2. -[Program](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/fonts.py)
 
 ##BlahBlah...
 **Richard Feynman** once said:
