@@ -12,9 +12,9 @@ Discussion about coding is most welcome.
 Contact me at *jameslee@whu.edu.cn*.
 
 ##Assignments
-Assignment reports will be written in LaTex manner. Tex files and pdf files will be uploaded.
+Assignment reports will be written in LaTeX manner. TeX files and PDF files will be uploaded.
 
-1. Linux,Python have been installed. Github accounts has been signed up. -[Readme.md](https://github.com/jamesofey/computationalphysics_N2013301020164/edit/master/README.md) has been written. 
+1. Linux,Python have been installed. Github accounts has been registered. -[Readme.md](https://github.com/jamesofey/computationalphysics_N2013301020164/edit/master/README.md) has been written. 
    
    Report files: 
    -[TeX File](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/Report_1.tex)
