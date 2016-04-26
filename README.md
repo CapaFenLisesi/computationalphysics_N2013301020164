@@ -30,7 +30,18 @@ Assignment reports will be written in LaTeX manner. TeX files and PDF files will
 
    -[name_1.0](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/name_1.0.py)
    -[name_2.0](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/name_2.0.py)
+4. Programs and reports are listed below:
 
+   -[TeX File](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/Assignment%204.tex)
+   -[PDF File](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/Assignment%204.pdf)
+   -[Program 1](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/gamma.py)
+   -[Program 2](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/friction.py)
+5. Programs and reports are listed below:
+
+   -[TeX File](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/Assignment%205.tex)
+   -[PDF File](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/Assignment%205.pdf)
+   -[Program 1](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/population.py)
+   -[Program 2](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/population_2.py) 
 ##BlahBlah...
 **Richard Feynman** once said:
 >It's great for a physicist to have a computer.
