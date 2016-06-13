@@ -41,7 +41,19 @@ Assignment reports will be written in LaTeX manner. TeX files and PDF files will
    -[TeX File](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/Assignment%205.tex)
    -[PDF File](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/Assignment%205.pdf)
    -[Program 1](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/population.py)
-   -[Program 2](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/population_2.py) 
+   -[Program 2](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/population_2.py)
+6. Programs and reports are listed below:
+
+   -[TeX File](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/Assignment%206.tex)
+   -[PDF File](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/Assignment%206.pdf)
+   -[Program 1](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/projectile_1.py)
+   -[Program 2](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/projectile_2.py)
+7. Programs and reports are listed below:
+
+   -[TeX File](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/Assignment%207.tex)
+   -[PDF File](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/Assignment%207.pdf)
+   -[Program 1](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/baseball_1.py)
+   -[Program 2](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/baseball_2.py)
 ##BlahBlah...
 **Richard Feynman** once said:
 >It's great for a physicist to have a computer.
