@@ -67,6 +67,14 @@ Assignment reports will be written in LaTeX manner. TeX files and PDF files will
    -[Program 1](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/chaotic_pend1.py)
    -[Program 2](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/chaotic_pend2.py) 
    -[Program 3](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/chaotic_pend3.py)
+10. Programs and reports are listed below:
+
+   -[TeX File](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/Assignment%2010.tex)
+   -[PDF File](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/Assignment%2010.pdf)
+   -[Program 1](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/Lorenz_1.py)
+   -[Program 2](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/Lorenz_2.py) 
+   -[Program 3](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/Lorenz_3.py)   
+   -[Program 4](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/Lorenz_4.py)
    
 ##BlahBlah...
 **Richard Feynman** once said:
