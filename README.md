@@ -54,6 +54,20 @@ Assignment reports will be written in LaTeX manner. TeX files and PDF files will
    -[PDF File](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/Assignment%207.pdf)
    -[Program 1](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/baseball_1.py)
    -[Program 2](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/baseball_2.py)
+8. Programs and reports are listed below:
+
+   -[TeX File](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/Assignment%208.tex)
+   -[PDF File](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/Assignment%208.pdf)
+   -[Program 1](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/pendulum_1.py)
+   -[Program 2](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/pendulum_2.py)   
+9. Programs and reports are listed below:
+
+   -[TeX File](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/Assignment%209.tex)
+   -[PDF File](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/Assignment%209.pdf)
+   -[Program 1](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/chaotic_pend1.py)
+   -[Program 2](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/chaotic_pend2.py) 
+   -[Program 3](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/chaotic_pend3.py)
+   
 ##BlahBlah...
 **Richard Feynman** once said:
 >It's great for a physicist to have a computer.
