@@ -79,10 +79,10 @@ Assignment reports will be written in LaTeX manner. TeX files and PDF files will
 
    -[TeX File](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/Assignment%2011.tex)
    -[PDF File](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/Assignment%2011.pdf)
-   -[Program 1](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/Mercury_1.py)
-   -[Program 2](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/Mercury_2.py) 
-   -[Program 3](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/Mercury_3.py)   
-   -[Program 4](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/Mercury_4.py)   
+   -[Program 1](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/mercury_1.py)
+   -[Program 2](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/mercury_2.py) 
+   -[Program 3](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/mercury_3.py)   
+   -[Program 4](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/mercury_4.py)   
    
 ##BlahBlah...
 **Richard Feynman** once said:
