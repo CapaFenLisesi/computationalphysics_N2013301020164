@@ -88,6 +88,11 @@ Assignment reports will be written in LaTeX manner. TeX files and PDF files will
    -[TeX File](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/Assignment%2012.tex)
    -[PDF File](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/Assignment%2012.pdf)
    -[Program 1](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/threebodies_1.py)
+13. Programs and reports are listed below:
+
+   -[TeX File](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/Assignment%2013.tex)
+   -[PDF File](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/Assignment%2013.pdf)
+   -[Program 1](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/laplace.py)
    
 ##BlahBlah...
 **Richard Feynman** once said:
