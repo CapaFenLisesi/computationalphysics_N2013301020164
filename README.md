@@ -27,7 +27,8 @@ Assignment reports will be written in LaTeX manner. TeX files and PDF files will
 3. I have written a program that reaches L2.
     
    **2016.3.18 Update**: Just finished name program 2.0 version. This one still stays in L2, but it supports length up to 14 name input.
-
+   -[TeX File](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/Assignment%203.tex)
+   -[PDF File](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/Assignment%203.pdf)
    -[name_1.0](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/name_1.0.py)
    -[name_2.0](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/name_2.0.py)
 4. Programs and reports are listed below:
