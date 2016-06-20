@@ -93,6 +93,13 @@ Assignment reports will be written in LaTeX manner. TeX files and PDF files will
    -[TeX File](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/Assignment%2013.tex)
    -[PDF File](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/Assignment%2013.pdf)
    -[Program 1](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/laplace.py)
+14. Programs and reports are listed below:
+
+   -[Report File](https://www.zybuluo.com/Jamesofey/note/413101)
+   -[Program 1](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/Wave.py)
+   -[GIF 1](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/Gauss.gif)
+   -[GIF 2](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/Gauss_2.gif)
+   -[GIF 3](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/Gauss_3.gif)
    
 ##BlahBlah...
 **Richard Feynman** once said:
