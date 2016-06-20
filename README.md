@@ -100,6 +100,13 @@ Assignment reports will be written in LaTeX manner. TeX files and PDF files will
    -[GIF 1](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/Gauss.gif)
    -[GIF 2](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/Gauss_2.gif)
    -[GIF 3](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/Gauss_3.gif)
+15. This is my course thesis. Programs and reports are listed below:
+
+   -[TeX File](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/Thesis.tex)
+   -[PDF File](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/Thesis.pdf)
+   -[Program 1](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/white_dwarf_1.py)
+   -[Program 2](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/white_dwarf_2.py) 
+   -[Program 3](https://github.com/jamesofey/computationalphysics_N2013301020164/blob/master/density_3d_plot.nb)
    
 ##BlahBlah...
 **Richard Feynman** once said:
