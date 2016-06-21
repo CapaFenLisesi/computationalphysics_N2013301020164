@@ -1,0 +1,268 @@
+\documentclass[reprint]{revtex4-1}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\begin{document}
+
+\title{A Study on White Dwarfs}
+
+\author{Li Minghao}
+\email[]{jameslee@whu.edu.cn; Student NO.2013301020164}
+
+\affiliation{Hongyi Class, School of Physical Science and Technology, Wuhan University}
+\date{\today}
+
+\begin{abstract}
+	This is a course thesis of computational physics lectured by Professor Cai. In this article, I have discussed the theory of white dwarfs and the observation of such compact objects. Corresponding programs and \TeX files have been uploaded on my \emph{Github} homepage. Some of them are written in \emph{Mathematica} language. Also, some of the plots in this thesis has been beautified based on the original plot. It should be noted that my numerical computations are not adequate enough to be compared to experimental results, since my knowledge about the precise composition of white dwarfs is not complete yet. 
+\end{abstract}
+\pacs{}
+\maketitle
+\section{Historical Introduction}
+The first white dwarf identified is \emph{40 Eridani B} which is in a three-body system of \emph{40 Eridani}. The star was discovered by Willam Herschel in 1783, and was later re-observed several times in the next century. It was not until the year of 1910 that \emph{40 Eridani B}'s pecularity had been noticed by astronomers. A group of British astronomers: Henry Norris Russell, Edward Charles Pickering and Williamina Fleming found that \emph{40 Eridani B} is ''white'' despite the fact that it was considerably dim. \par
+The most famous white dwarf --- \emph{Sirius B} was also discovered in early periods. The great mathematician ,astronomer Friedrich Bessel noticed in 1844 that \emph{Sirius} moved in a periodic manner. He further asserted that \emph{Sirius} had unseen co-star, and estimated its period to be half a century. Later observations confirmed its existence. In 1915, Walter Adams found that \emph{Sirius B} is also ''white'' despite the fact that it was considerably dim.\par
+These two white dwarfs, together with \emph{Van Maanen's Star}, were named \emph{classical white dwarfs}, since they were the first three white dwarfs that have been discovered.\par
+It was before long that white dwarfs' extraodinary huge density was noticed by astophysicists. At the beginning of the 20th century, astronomical observations have become accurate. Astrophysicists are able to determine the mass of a star which is in a binary system by investigating its dynamical property. Determining the radii of a star was a little more complicated, but also within our reach. By invoking the following formula:\\
+\begin{equation}
+L=10^{0.4(4.72-M_b)}L_{\odot}
+\end{equation}
+one is able to determine total luminosity of any object(Notice that here $M_b$ is the absolute bolometrc magnitude which can be measured on earth). Spectral analysis also enables one to obtain the effective temperature on the star. The combination of these two paramters enable physicists to estimate(\emph{not} determine!) the radii of the star through \emph{Stefan-Boltzmann Law}:
+\begin{equation}
+L=4\pi R^{2}\sigma T_e^{4}
+\end{equation}
+In 1916, Ernst Opik estimated that 40 Eridani B's density to be $\rho_{\odot}$. These astonishing findings motivated physicists including Chandraeskhar to seek for a new star model.\par
+The theory of white dwarfs was soon formulated, meanwhile the search for white dwarfs was progressing steadily. By 1999, more than 2000 white dwarfs were found. The project Sloan Digital Sky Survey was a great leap forward, for more than 9000 white dwarfs were found by the project.
+
+\section{The Theory of White Dwarfs}
+\subsection{Thermodynamics of Compact Objects}
+\subsubsection{Some Fundamental Relations}
+In thermodynamics system I often use a potential function to describe its properties. Here I will deal with the identical ideal Fermions, therefore the Landau potential $\Omega  =  - PV$ is a reasonable choice because it can describe a system with variable number of particles and variable energy. From fundamental relation of Thermodynamics I can show that:\par
+\begin{equation}
+d \Omega  =  - Sd T - pd V - Nd \mu  \label{1.1}
+\end{equation}
+Now I focus on a single particle state denoted by momentum $\vec{p}$. I can view this state as a subsystem of the whole system, and it has its own Landau potential
+\begin{equation}
+{\Omega _{\rm{p}}} =  - kT{{\mathop{\rm lnZ}\nolimits} _G} =  - kT\ln \left( {1 + {e^{ - \frac{{\varepsilon  - \mu }}{{kT}}}}} \right) \label{1.2}
+\end{equation}
+where $\epsilon$ means the kenetic energy. Use the relation Eq.(\ref{1.1}) I can get the mean particle number of these single particle state called Fermi-Dirac distribution
+\begin{equation}
+{n_{\rm{p}}} =  - {\left( {\frac{{\partial {\Omega _{\rm{p}}}}}{{\partial \mu }}} \right)_{T,V}} = \frac{1}{{{e^{\frac{{\varepsilon  - \mu }}{{kT}}}} + 1}} \label{1.3}
+\end{equation}
+The Thermodynamics potential $\Omega$  must be an extensive quantity, and therefore I can make summation of $\Omega_p$  of all single particle states to get the total $\Omega$  of the system
+\begin{equation}
+\Omega  = \int {{\Omega _{\rm{p}}} \cdot \frac{g}{{{h^3}}}{\mathop{\rm d}\nolimits}^3 {\rm{r}}{\mathop{\rm d}\nolimits}^3 {\rm{p}}} {\rm{ = }}\frac{{4\pi g}}{{{h^3}}}V\int_0^\infty  {{p^2}{\Omega _{\rm{p}}}{\mathop{\rm d}\nolimits} p}  \label{1.4}
+\end{equation}
+here $g/{h^3} = \left( {2s + 1} \right)/{h^3}$ means the state density in phase space. I then can get pressure $P$  through relation $\Omega  =  - PV$. I can also derive density of particle number and density of energy in position space
+\begin{align}
+n &= \frac{1}{V}\int {{n_{\rm{p}}} \cdot \frac{g}{{{h^3}}}{\mathop{\rm d}\nolimits}^3 {\rm{r}}{\mathop{\rm d}\nolimits}^3 {\rm{p}}}  = \frac{{4\pi g}}{{{h^3}}}\int_0^\infty  {{p^2}{n_{\rm{p}}}{\mathop{\rm d}\nolimits} p} \label{1.5}\\
+{\rho _E} &= \frac{1}{V}\int {\sqrt {{{\left( {{\rm{p}}c} \right)}^2} + {{\left( {m{c^2}} \right)}^2}}  \cdot {n_{\rm{p}}}\frac{g}{{{h^3}}}{\mathop{\rm d}\nolimits}^3 {\rm{r}}{\mathop{\rm d}\nolimits}^3 {\rm{p}}}  \nonumber \\
+&= \frac{{4\pi g}}{{{h^3}}}\int_0^\infty  {{p^2}{n_{\rm{p}}}\sqrt {{{\left( {pc} \right)}^2} + {{\left( {m{c^2}} \right)}^2}} {\mathop{\rm d}\nolimits} p} \label{1.6}
+\end{align}
+Once I get the energy density ${\rho _E}$ from Eq.(\ref{1.6}) and pressure $P$ from Landau potential, I can derive the implicit relation between ${\rho _E}$ and $P$, although it will always depend on the temperature(I assume chemical potential $\mu$  will be cancelled).
+\subsubsection{Ideal degenerate Fermi-gas}
+Since the equation of state always depend on temperature as discussed above, which make the problem complicated, I now discuss a special and simple case of it. At temperature $T=0$,  the Fermi-gas (e.g. the electron gas and neutron gas) will be at the ground state, the degeneracy pressure will be the only source of pressure. Although there will never be a case with $T=0$, in many cases ideal degenerate Fermi-gas model is a reasonable choice(e.g. the white dwarf and the outer shell of neutron star). \par
+At zero temperature the Fermi-Dirac distribution Eq.(\ref{1.3}) becomes a step function located at $\epsilon_F=\mu$ (called Fermi-energy). Then from Eq.(\ref{1.4}), Eq.(\ref{1.5}) and Eq.(\ref{1.6}) I can derive the pressure, density of particle number, density of energy at zero temperature and finally get the equation of state. I begin with equation Eq.(\ref{1.5}), let $n_P$  become step function and I get the density of particle number 
+\begin{equation}
+n = \frac{{4\pi g}}{{{h^3}}}\int_0^{{p_F}} {{p^2}{\mathop{\rm d}\nolimits} p}  = \frac{{x_F^3}}{{3{\pi ^2}{\lambda ^3}}} \label{2.1}
+\end{equation}
+where $\lambda  = \hbar /\left( {mc} \right)$ is the Compton wavelength of the particle, ${p_F} = {x_F}mc$ is Fermi momentum, and I have assume $g=2$ for the further discussion of the electron and neutron. Eq.(\ref{2.1}) has clear physical meaning (the following equations can also be interpreted like this), where $\lambda^3$ behaves like the volume that a particle occupy (there is just a difference of coefficient). Now for Eq.(\ref{1.6}) at zero temperature I get the density of energy
+\begin{align}
+	 {\rho _E} &= {{4\pi g} \over {{h^3}}}\int_0^{{p_F}} {{p^2}\sqrt {{{\left( {pc} \right)}^2} + {{\left( {m{c^2}} \right)}^2}} {\mathop{\rm d}\nolimits} p}  \nonumber \\
+	 &= {{m{c^2}} \over {{\pi ^2}{\lambda ^3}}}\left[ {{{x_F^3} \over 3} + \int_0^{{x_F}} {{x^2}\left( {\sqrt {1 + {x^2}}  - 1} \right){\mathop{\rm d}\nolimits} x} } \right]  \nonumber \\ 
+	& {\rm{                                 }} = {{m{c^2}} \over {24{\pi ^2}{\lambda ^3}}}[{ - 8x_F^3 + 3\sqrt {1 + x_F^2} \left( {{x_F} + 2x_F^3} \right) - 3{\mathop{\rm arcsinh}\nolimits} \left( {{x_F}} \right)}] \label{2.2}
+\end{align}
+his equation looks like a little complicated, I will soon simplify it together with the following equation. And from Eq.(\ref{1.4}) I get the pressure of ideal degenerate Fermi-gas
+\begin{align}
+	 P &= {{4\pi g} \over {{h^3}}}kT\int_0^\infty  {{p^2}\ln \left( {1 + {e^{ - {{\varepsilon  - \mu } \over {kT}}}}} \right){\mathop{\rm d}\nolimits} p}  \nonumber \\ 
+	& = {{8\pi } \over {3{h^3}}}\int_0^{{p_F}} {{p^3}{{\partial \varepsilon } \over {\partial p}}{\mathop{\rm d}\nolimits} p}    
+	 {\rm{       }} \nonumber \\ 
+	& = {{m{c^2}} \over {3{\pi ^2}{\lambda ^3}}}\int_0^{{x_F}} {{{{x^4}} \over {\sqrt {1 + {x^2}} }}} {\mathop{\rm d}\nolimits} x \nonumber \\ 
+	& = {{m{c^2}} \over {24{\pi ^2}{\lambda ^3}}}\left( {x_F\sqrt {1 + x_F^2} \left( { - 3 + 2x_F^2} \right) + 3{\mathop{\rm arcsinh}\nolimits} \left( {{x_F}} \right)} \right)  \label{2.3}
+\end{align}
+Equations Eq.(\ref{2.1}), Eq.(\ref{2.2}), Eq.(\ref{2.3}) are the final result I want to derive. Then I will use these result to give the equation of state of white dwarf and neutron star.\par
+For white dwarf, the pressure is generated by the degeneracy pressure of electron, while the mass density (I use mass instead of energy density in Newtonion mechanics) is mainly provided by the rest mass of nuclei. I therefore use Eq.(\ref{2.1})  and Eq.(\ref{2.3}) and replace the density of particle number by the mass density of matter(${\rho _M} = {m_B}{\nu _e}{n_e}$, where $n_e$ is density of electron number determined by Eq.(\ref{2.1}), ${\nu _e} = n/{n_e}$ , $m_\beta$   is the rest energy per nucleon)
+, and then I get the equation of state of white dwarf (implicit function)
+\begin{align}
+{\rho _M} &= {{{m_B}{\nu _e}} \over {3{\pi ^2}{\lambda ^3}}}x_F^3 \nonumber \\
+P &= {{m{c^2}} \over {3{\pi ^2}{\lambda ^3}}} \cdot {3 \over 8}\left[ {{x_F}\sqrt {1 + x_F^2} \left( {{2 \over 3}x_F^2 - 1} \right) + {\mathop{\rm arc}\nolimits} \sinh \left( {{x_F}} \right)} \right] \label{2.4}
+\end{align}
+Using this equation of state (together with the Newtonion equilibrium equation that I will discuss in Section 2) I can solve the radius and mass of the white dwarf.\par
+However, in the case of neutron star, I use energy density instead of mass density (because the relativistic effect I will discuss latter). I therefore use Eq.(\ref{2.2}) and Eq.(\ref{2.3}) to give the equation of state of neutron star. According to Oppenheimer’s article, it is better to make the variable substitution $t = 4{\mathop{\rm arcsinh}\nolimits} {x_F}$, and then from Eq.(\ref{2.2}) and Eq.(\ref{2.3}) I get a simplifying equation of state (implicit function) as following
+\begin{align}
+{\rho _E} &= \kappa \left( {\sinh t - t} \right)\nonumber \\
+P &= {\kappa  \over 3}\left( {\sinh t + 3t - 8\sinh {t \over 2}} \right) \label{2.5}
+\end{align}
+where $\kappa  = m{c^2}/\left( {32{\pi ^2}{\lambda ^3}} \right)$. This equation of state will be used (together with TOV equation that I will discuss in Section 3) to solve the radius and mass of neutron star. 
+
+\subsection{Equilibrium of White Dwarf}
+\subsubsection{Equilibrium Equation in Newtonion Gravity}
+\begin{figure}
+	\centering   
+	\includegraphics[width=2.5in]{Figure_7.png}  
+	\caption{Sketch of white dwarf} 
+	\label{fig:7} 
+\end{figure}
+For low density compact objects like white dwarf, Newtonion gravity behaves well on solving these system. I assume the white dwarf is spherically symmetric and then use Newtonion gravity to give the equilibrium equation of it. I begin with considering a small shell inside the star. The mass enclosed within $r$ is given by
+\begin{equation}
+m\left( r \right) = \int_0^r {\rho \left( {r'} \right) \cdot 4\pi r{'^2}} dr' \label{3.1}
+\end{equation}
+The gravity and the pressure together make the shell equilibrium. I therefore have
+\begin{equation}
+d\sigma dP\left( r \right) + {{G \cdot \rho \left( r \right)d\sigma dr \cdot m\left( r \right)} \over {{r^2}}} = 0 \label{3.2}
+\end{equation}
+By simplifying Eq.(\ref{3.1}) and Eq.(\ref{3.2}) I will have two equations
+\begin{align}
+{{dm} \over {dr}} &= 4\pi {r^2}\rho \left( r \right) \label{3.3}\\
+{{dP} \over {dr}} &=  - {{G\rho \left( r \right)m\left( r \right)} \over {{r^2}}} \label{3.4}
+\end{align}
+These two equations determine the equilibrium of the star. But there are three unknown functions in these two equations, I therefore need another equation, usually the equation of state. By solving these two equations together with equation of state, I will finally get the density, pressure distribution within the star, and if $P=0$ at some $r=r_0$, it means I reach the surface of the star, and thus $r_o$, $m(r_0)$ will be the radius and mass of it. 
+
+\subsubsection{Mass and Radius of White Dwarf}
+Therefore, for white dwarf I now have four equations and four unknown functions $P$, $m$ , $\rho$ , $x_F$ , I list then in the following.  In the previous section I have get the equilibrium equation from Newtonian gravity and the definition of mass inside the shell with radius $r$:
+\begin{align}
+{{dP\left( r \right)} \over {dr}} &=  - {{Gm\left( r \right)} \over {{r^2}}}\rho \label{4.1}\\
+{{dm\left( r \right)} \over {dr}} &= 4\pi \rho {r^2} \label{4.2}
+\end{align}
+And other two equations give the implicit relation between density and pressure (here I do not make any further assumptions about the equations of the state, so this is not a polytropic star):
+\begin{align}
+\rho  &= {{{m_B}{\nu _e}} \over {3{\pi ^2}{\lambda ^3}}}x_F^3 \label{4.3}\\
+P &= {{m{c^2}} \over {3{\pi ^2}{\lambda ^3}}} \cdot {3 \over 8}\left[ {{x_F}\sqrt {1 + x_F^2} \left( {{2 \over 3}x_F^2 - 1} \right) + {\mathop{\rm arc}\nolimits} \sinh \left( {{x_F}} \right)} \right] \label{4.4}
+\end{align}
+I bring Eq.(\ref{4.3}) and Eq.(\ref{4.4}) into Eq.(\ref{4.1}) and Eq.(\ref{4.2}) ,  then I get two equations about $x_F(r)$ ,$m(r)$ :
+\begin{align}
+{{d{m^*}} \over {d{r^*}}} &= 4\pi {r^*}^2{x^3} \label{4.5}\\
+{{d{x^*}} \over {d{r^*}}} &=  - {{\sqrt {1 + {x^2}} } \over x}{{{m^*}} \over {{r^*}^2}} \label{4.6}
+\end{align}
+here I set proper units of $m$  and $r$, and denote the quantities in our units by ‘*’. The unit of length is$b = {{\pi c} \over {{m_B}{\nu _e}}}\sqrt {{{3m{\lambda ^3}} \over G}}  \approx 1.3764 \times {10^7}{\mathop{\rm m}\nolimits} $ , the unit of mass is $a = {{{b^3}{m_B}{\nu _e}} \over {3{\pi ^2}{\lambda ^3}}} \approx 5.0643 \times {10^{30}}{\mathop{\rm kg}\nolimits} $ , and I choose $\nu_e=2$ that is proper for most matter. I then set the boundary conditions as $m\left( 0 \right) = 0$, $x\left( 0 \right) = {x_0}$ , where $x_0$ may be any positive real number corresponding to the density at center of the star, it will finally determine its mass and radius. For any given $x_0$ , I solve this two equations, and once $x = 0$ at some $r = {r_0}$ , it will be the boundary of the star, then $m(r_0)$ will be the mass of it. By solving this two equations with different $x_0$ I will get the relations between radius and mass of the star. I may can’t solve those equations analytically, but instead I using numerical approach to solve it. Given the initial conditions, I use Euler method to iterate until the boundary is found. \par
+To confirm our result, I can compare it with the analytical one in some special cases. If the density of the white dwarf is low, I can believe that the electron within it is non-relativistic. And if the density is much higher, I may expect the electron to be ultra-relativistic. In these two cases, through approximation of equations Eq.(\ref{4.3}) and Eq.(\ref{4.4})  I can get the explicit equation of state
+\begin{equation}
+P = K{\rho ^\gamma } \label{4.7}
+\end{equation}
+In non-relativistic case $K = {{m{c^2}} \over 5}{{{{\left( {3{\pi ^2}} \right)}^{2/3}}} \over {m_B^{5/3}}}{{{\lambda ^2}} \over {\nu _e^{5/3}}}$, $\gamma  = 5/3$, and in ultra-relativistic case $K = {{m{c^2}} \over 4}{{{{\left( {3{\pi ^2}} \right)}^{1/3}}} \over {m_B^{4/3}}}{\lambda  \over {\nu _e^{4/3}}}$, $\gamma  = 4/3$. Now I use Eq.(\ref{4.7}) together with Eq.(\ref{4.1}) and Eq.(\ref{4.2}), and make variable substitution $r = {R_0}\xi $, $\rho  = {\rho _0}{\theta ^{1/\left( {\gamma  - 1} \right)}}$, where ${R_0} = {\left( {{{\gamma K\rho _0^{\gamma  - 2}} \over {4\pi G(\gamma  - 1)}}} \right)^{1/2}}$, and ${\rho _0}$ is the density of the center of the star, then I get the the Lane-Emden equation
+\begin{equation}
+{{\mathop{\rm d}\nolimits}  \over {{\mathop{\rm d}\nolimits} \xi }}\left( {{\xi ^2}{{{\mathop{\rm d}\nolimits} \theta } \over {{\mathop{\rm d}\nolimits} \xi }}} \right) =  - {\xi ^2}{\theta ^{1/\left( {\gamma  - 1} \right)}} \label{4.8}
+\end{equation}
+The corresponding boundary condition is $\theta \left( 0 \right) = 1$, $\theta '\left( 0 \right) = 0$. I can also get the mass and radius of the star in the following way: Solve Lane-Emden equation numerically, and find ${\xi _0}$ at which $\theta  = 0$ which corresponds the surface of the star, then ${R_W} = {R_0}{\xi _0}$  is the radius of the star, and ${M_W} = \int_0^{{r_0}} {4\pi {r^2}\rho \left( r \right)} dr = 4\pi R_0^3{\rho _0}\xi _0^2\left| {\theta '\left( {{\xi _0}} \right)} \right|$ is the mass of the star. If I cancel the central density ${\rho _0}$ from the above two relations, I then get the radius-mass relation of the white dwarf: 
+\begin{align}
+R_W^3{M_W} &= {\mathop{\rm const}\nolimits} . = 4\pi {\left( {{{5K} \over {8\pi G}}} \right)^3}\xi _0^5\left| {\theta '\left( {{\xi _0}} \right)} \right| \text{   (non-relativistic)} \nonumber \\
+{M_W} &= {\mathop{\rm const}\nolimits} . = 4\pi \left( {{K \over {\pi G}}} \right)\xi _0^2\left| {\theta '\left( {{\xi _0}} \right)} \right| \text{   (ultra-relativistic)} \label{4.9}
+\end{align}
+\begin{figure}
+	\centering   
+	\includegraphics[width=3in]{Figure_8.png}  
+	\caption{The radius-mass relation of the white dwarf. Given the central density of the star, I use Euler method to calculate the density distribution of the star from equations Eq.(\ref{4.5}), Eq.(\ref{4.6}). Vanishing density means the boundary of the star and thus determine the radius and mass of it. Red scattering dots show the numerical result. For comparison, I also plot the result corresponding to non-relativistic (blue scattering dots) and ultra-relativistic (orange line) equation of state. It is clear that there exist upper limit of mass at 1.450 mass of sun (called Chandrasekhar mass).} 
+	\label{fig:8} 
+\end{figure}
+FIG.\ref{fig:8} show the relation between mass and radius of the star, for comparison I also give the relation of mass and radius that is derived in the non-relativistic and ultra-relativistic cases. From it I can see the fundamental feature of the white dwarf. As the mass of the white dwarf increase, its radius will decrease. That means a more massive white dwarf will much more compact than the less massive one, so the density of massive white dwarf is very high. I can see that a white dwarf with mass less than $0.1{M_{{\mathop{\rm sun}\nolimits} }}$ is “non-relativistic”, if I use a non-relativistic equation of state to describe it, the deviation with be small. But once its mass is larger than $0.2{M_{{\mathop{\rm sun}\nolimits} }}$  the electron gas within it will be relativistic, I should use relativistic equation of state to describe it. Another feature of white dwarf is that there exist upper limit of its mass (called Chandrasekhar mass), any polytropic white dwarf can’t approach this mass unless how high density it would be. The numerical result match the analytically result which use ultra-relativistic equation of state to derive this mass.\par
+\begin{figure}
+	\centering   
+	\includegraphics[width=3in]{Figure_9.png}  
+	\caption{Density distribution in white dwarf. A spherically symmetric white dwarf is considered here. Using Eq.(\ref{4.4}) and Eq.(\ref{4.6}) I can solve the density distribution of this star. Here I choose $x_0=0.1$ (corresponding to a typical white dwarf with central density $1.942 \times {10^3}{\mathop{\rm kg}\nolimits} /{m^3}$ , radius $0.046 R_{\odot}$ , mass $0.022M_{\odot}$ ), and plot the density on a section passing by the center of the star. The density has a maximum in the center as expected, and vanish in the exterior boundary.} 
+	\label{fig:9} 
+\end{figure}
+FIG.\ref{fig:9} show the corresponding density distribution of the star (I just show a section passing the center of the star). I choose the value to make it a typical white dwarf. The density has a maximum value at the center of the star as expected, and it decreases monotonically until reaches the surface of the star.
+
+\subsubsection{Cooling of White Dwarf}
+The white dwarf’s temperature is high once it comes into being. However, as it burns out its energy source, many process contributes in its cooling. The White dwarf can be viewed as a thin shell (with semi-classical electron gas and thus a relative high conductivity of heat) covering a huge core with degeneracy electron gas and thus being isothermal). I begin with considering the diffusion of photon in the thin shell of the surface of the star, which carries energy of white dwarf to the outer space, and thus cools the star. The luminosity of diffusion of photon is given by 
+\begin{equation}
+{L_\gamma } =  - 4\pi {r^2}{c \over {3\kappa \rho }}{{\mathop{\rm d}\nolimits}  \over {{\mathop{\rm d}\nolimits} r}}\left( {a{T^4}} \right) \label{5.1}
+\end{equation}
+where $\rho$ is mass density and is opacity, and $a = 7.56 \times {10^{15}}{\rm{   }}{\mathop{\rm erg}\nolimits}  \cdot c{m^{ - 3}} \cdot {K^{ - 3}}$ is radiation constant. When the temperature is relative low, the free-bound process (photon absorbed by bound electron and makes the atom ionized) dominate the opacity given by $\kappa  = {\kappa _0}\rho {T^{ - 3.5}}$. I further assume the star is in equilibrium in a not very long time, so the equation of equilibrium of Newtonion gravity Eq.(\ref{3.3}) Eq.(\ref{3.4}) is applied to this case. The shell within the surface of the star has low density, so its equation of state should be semi-classical, which mean the following relation
+\begin{equation}
+P = {\rho  \over {\nu {m_B}}} \label{5.2}
+\end{equation}
+where $\rho$ is the mass density as before, $\nu\approx1.4$ is the mean nucleons per electron. With Eq.(\ref{3.3}), Eq.(\ref{3.4}) and Eq.(\ref{5.1}), Eq.(\ref{5.1}) I can solve the relation between pressure and temperature
+\begin{equation}
+P = {\left( {{{64} \over {51}}{{\pi acGMk} \over {{\kappa _0}{L_\gamma }\nu {m_B}}}} \right)^{1/2}}{T^{4.25}} \label{5.3}
+\end{equation}
+I now want to find the position at which the semi-classical electron gas become degenerate. So I associate \ref{5.2}, \ref{5.3} and equation of state of degenerate ideal electron gas \ref{4.7} (I assume the electron to be non-relativistic, and therefore $\gamma=\frac{5}{3}$), and I therefore get the critical temperature and density
+\begin{align}
+T_{\text{critical}}&=[\frac{L_{\gamma}}{2\times10^6M/M_{\odot}}]^{2/7}(\text{K}) \label{5.4}\\
+\rho_{\text{critical}}&=4.8\times10^{-8}(\text{g}/\text{cm}^3)T_{\text{critical}}^{3/2} \label{5.5}
+\end{align}
+For a typical white dwarf $L=10^{-3}L_{\odot}$, $M=M_{\odot}$, the corresponding temperature and density is ${T_{critical}} = 8 \times {10^6}{\mathop{\rm K}\nolimits} $, ${\rho _{critical}} = 1 \times {10^3}{\mathop{\rm g}\nolimits} /c{m^3}$, which is not much high so that the semi-classical shell is just a thin shell in the surface of the white dwarf.\par
+The critical temperature equation Eq.(\ref{5.4}) give the relation between the luminosity and temperature ${L_\gamma } = CM{T^{7/2}}$(the core, which occupy the most volume of the star, is isothermal so that the critical temperature can be viewed as the core’s temperature), I can use it to determine the cooling of the star. I note that the heat capacity in the core of the star is mainly provided by the ions, because ions here are semi-classical and has large heat capacity while electron here is high degenerate and has nearly negligible heat capacity. So the internal energy of the core here is $E = {3 \over 2}NkT = {3 \over 2}kT{M \over {{m_B}A}}$, where $A$ is the mass number of the atom and I assume the star is made of single atom molecule. I therefore can get the cooling equation as following
+\begin{equation}
+ - {{{\mathop{\rm d}\nolimits} E} \over {{\mathop{\rm d}\nolimits} t}} = {L_\gamma }{\rm{    }} \Rightarrow {\rm{    }} - \left( {{{3k} \over {2A{m_B}C}}} \right){{dT} \over {dt}} = {T^{3/2}} \label{5.6}
+\end{equation}
+I integrate this equation and let $T\left( {t = 0} \right) \gg T\left( t \right)$, and then get the time evolution of the temperature of the star
+\begin{equation}
+T\left( t \right) = {\left( {{{5A{m_B}C} \over {3k}}t} \right)^{ - 2/5}} \label{5.7}
+\end{equation}
+\begin{figure}
+	\centering   
+	\includegraphics[width=3in]{Figure_10.png}  
+	\caption{Cooling of white dwarf. Here I show the temperature – time relation of a typical white dwarf when it is cooling. Parameters here is: mass number $A=4$ (I assume this star is occupied mainly by helium), and $CM_{\odot}=2\times10^{6}\text{erg}/\text{s}$ for a star that bound-free absorption of photon dominate. The temperature $T\propto t^{-2/5}$  so it decreases as time increases. A typical time of cooling of white dwarf is $10^9$  year, and here I just plot the time varies from $10^3$  to $10^5$  year to show the behavior of its cooling.} 
+	\label{fig:10} 
+\end{figure}
+FIG.\ref{fig:10} give the plot of such a process of cooling. The temperature decrease monotonically. If I let the temperature be $T = 8 \times {10^6}{\mathop{\rm K}\nolimits} $(corresponding luminosity is $L=10^{-3}L_{\odot}$  from Eq.(\ref{5.4})), then I get the time $t = 1.8 \times {10^9}{\mathop{\rm year}\nolimits} $ . It is a very long time for human beings!\par
+The white dwarf has relative lower density compared with other compact object, so the Newtonion gravity is suitable for solving the structure of it. However, for other compact object (e.g. neutron star), the strong interaction of nucleons must be considered, so the pressure provided by nucleons will also affect the structure of the star. What’s more, as gravity be much stronger, the effect of general relativity must be play import role in determining the structure of the star and problem thus will be much more complicated In the case of neutron star. Therefore white dwarf is a just a very special case of compact objects in our universe. I will consider the neutron star in the following section.
+
+
+
+
+
+\section{Astronomical Observation of White Dwarfs}
+ According to the theory of white dwarfs, white dwarfs with definite mass should have definite radii. Almost all the white dwarfs observed have the mass around $M_{\odot}$. Then according to \emph{Stefan-Boltzmann Law}, I should have:
+ \begin{equation}
+ L\propto T_e^4
+ \end{equation} 
+ \begin{figure}
+ 	\centering   
+ 	\includegraphics[width=3in]{Figure_1.png}  
+ 	\caption{White Dwarfs on H-R Diagram\footnote{cited from Shapiro's book}} 
+ 	\label{fig:1} 
+ \end{figure}
+ Therefore, white dwarfs are expected to occupy a narrow strap in \emph{H-R diagram}. In fact, they do so as shown in FIG.\ref{fig:1}. In fact, such tests are named ''zero-order tests'' of the theory of white dwarfs.\par
+ Determination of white dwarfs' radii can be tricky. According to energy conservation in radiation, I have:
+ \begin{equation}
+ F_{\nu}(\text{Measured})=F_{\nu}(\text{Surface})\frac{R^{2}}{D^{2}}
+ \end{equation}
+ where $F_{\nu}$ is radiation flux. In this expression, $F_{\nu}(\text{Measured})$ is measured on earth. $F_{\nu}(\text{Surface})$ is calculated in an atmosphere model which requires the measurement of surface temperature and surface gravity of the white dwarf. A detailed description was compiled by Shipman(1979). $D$ is calculated with nearby stars by measuring their parallax. Therefore, I are able to obtain $R$.\par
+ What about mass of white dwarfs? This can be easily done for a white dwarf in binary or triple star system. One simply has to analyze the dynamical behavior. Determination of solitary white dwarf's mass is tricky. General relativity predicts that photons near strong gravitational field are red-shifted. By measuring this red shift effect, one is able to determine the white dwarf's mass. This effect is quantitatively described by:
+ \begin{equation}
+ \frac{\Delta \lambda}{\lambda}=\frac{2GM}{Rc^2}
+ \end{equation}
+ In practice, astronomers use the non-LTE core of H$\alpha$ line to measure this effects, for other lines are easily affected by pressure shifts. I have to be extra careful about the choice of white dwarfs, for the red-shift effects need to be distinguished from the Doppler effects. In order to do that, physicists usually use white dwarfs in wide binaries or common proper-momtion pairs, for these white dwarfs' velocities can be measured accurately.\par
+ Typical results obtained by these methods are listed below:
+  \begin{figure}
+  	\centering   
+  	\includegraphics[width=3in]{Figure_2.png}  
+  	\caption{Mass--Radii Relation\footnote{cited from Shipman's paper}} 
+  	\label{fig:2} 
+  \end{figure}
+  
+  \begin{table}[!htp]
+  	\centering
+  	\scalebox{1}{
+  		\begin{tabular}{c c c}
+  			Object & Mass($M_{\odot}$) & Radius($M_{\odot}$)\\
+  			\hline
+  			Sirius B & $1.03\pm0.015$ & $0.0074\pm0.0007$ \\
+  			Stein 2051B & $0.48\pm0.045$ & $0.0111\pm0.0015$ \\
+  		40 Eri B & $0.43\pm0.02$ & $0.0124\pm0.0005$ \\
+  		G107-70AB & $0.65\pm0.15$ & $0.0127\pm0.002$ \\
+  		Procyon B & $0.594\pm0.012$ & $0.0096\pm0.0005$ 
+  	    \end{tabular}}
+  	    \caption{Typical White Dwarfs' Mass and Radius}
+  \end{table}
+  As I can see in FIG.\ref{fig:2}, observations do not agree with our theory of model perfectly. Such facts indicate the necessity to further modify our model.
+   
+  
+  \section*{Acknowledgement}
+  When tackling this topic, I benefitted a lot from the valuable discussions with Chen Yangyao. I would like to thank him for pointing out several calculational mistakes I made, also, for his willingness to discuss with me.
+  	
+\begin{thebibliography}{99}	
+\bibitem{1} Lorimer, D. R., Kramer, M., \textit{Handbook of Pulsar Astronomy}, (London: Cambridge University Press, 2005).
+\bibitem{2} Chau, W. Y.,  \textit{Ap. J., 147, 664}, (1967).
+\bibitem{3} Woltjer, L.,  \textit{Ap. J., 140, 1309}, (1964).
+\bibitem{6} Stuart L. Shapiro and Saul A. Teukolsky, \textit{Black holes, white dwarfs, and neutron stars: the physics of compact objects}, (New York: Wiley, 1983).
+\bibitem{7} Provencal, J. L.,  Shipman, H. L., et.al, \textit{The Astrophysical Journal, 494 :759--767}, (1998).
+\bibitem{8} Kippenhahn, J.,  Weigert, A., Weiss, A., \textit{Stellar Structure and Evolution}, (Berlin: Springer, 2012).
+\bibitem{9} Sedrakian, A.,  \textit{Lecture on Astroparticle Physics}, (2015).
+\bibitem{10} Wald, R.,  \textit{General Relativity}, (Chicago: the University of Chicago Press, 1984).
+\bibitem{11} Carrol, S.,  \textit{Spacetime and Geometry}, (Addison-Wesley, 2004).
+.
+ \end{thebibliography}
+\end{document}
